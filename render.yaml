@@ -1,0 +1,17 @@
+services:
+  - type: web
+    name: asd-onboarding-igor
+    runtime: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: python bot.py
+    envVars:
+      - key: GEMINI_API_KEY
+        sync: false
+      - key: MATTERMOST_BOT_TOKEN
+        sync: false
+      - key: MATTERMOST_URL
+        sync: false
+      - key: MATTERMOST_TOKEN
+        sync: false
+      - key: PORT
+        value: 10000
